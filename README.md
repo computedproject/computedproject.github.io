@@ -1,2 +1,3 @@
-# computedproject.github.io
-Computed Project Webpage 
+# Computed Project
+
+Hi, I'm working in something awesome \ (•◡•) /
