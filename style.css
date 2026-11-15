@@ -97,3 +97,4 @@ em { font-weight: inherit; }
 @media (max-width: 700px) { .work-list { width: 100%; } .work-name { font-size: 21px; } .footer-end { gap: 16px; } }
 .back-top { white-space: nowrap; }
 @media (max-width: 700px) { .footer { flex-wrap: wrap; gap: 14px; } .footer-name { font-size: 20px; white-space: nowrap; } .footer-end { gap: 14px; } }
+.dot-warm { color: var(--warm); }
