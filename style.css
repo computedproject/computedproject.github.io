@@ -84,7 +84,6 @@ em { font-weight: inherit; }
 .logo3d .b .f-left, .logo3d .b .f-right { background: #1f86ab; }
 @media (max-width: 700px) { .logo3d { --s: 38px; } }
 
-.find { align-items: flex-start; }
 .work-list { list-style: none; margin: 0; padding: 0; width: min(560px, 100%); border-top: 1px solid var(--line); }
 .work-list li { border-bottom: 1px solid var(--line); }
 .work-list a { display: grid; grid-template-columns: 1fr auto; column-gap: 24px; row-gap: 4px; padding: 22px 0; align-items: baseline; }
