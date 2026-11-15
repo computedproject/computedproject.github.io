@@ -1,3 +1,5 @@
 # Computed Project
 
-Hi, I'm working in something awesome \ (•◡•) /
+We are people solving problems using computers.
+
+Static site published at https://computedproject.github.io
