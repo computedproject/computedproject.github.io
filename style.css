@@ -61,3 +61,25 @@ em { font-weight: inherit; }
   .section-heading { margin-bottom: 36px; }
   .footer { min-height: 100px; }
 }
+
+/* 3D logo: two joined cubes, built with CSS transforms and driven by main.js */
+.logo3d { --s: clamp(52px, 7.4vw, 84px); position: relative; flex-shrink: 0; width: calc(var(--s) * 2.6); height: calc(var(--s) * 2.6); display: grid; place-items: center; perspective: 900px; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; outline-offset: 10px; }
+.logo3d.dragging { cursor: grabbing; }
+.logo3d-scene { position: relative; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
+.logo3d .cube { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
+.logo3d .cube.a { transform: translateX(calc(var(--s) * -.5)); }
+.logo3d .cube.b { transform: translateX(calc(var(--s) * .5)); }
+.logo3d .face { position: absolute; left: calc(var(--s) / -2); top: calc(var(--s) / -2); width: var(--s); height: var(--s); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.logo3d .f-front { transform: translateZ(calc(var(--s) / 2)); }
+.logo3d .f-back { transform: rotateY(180deg) translateZ(calc(var(--s) / 2)); }
+.logo3d .f-right { transform: rotateY(90deg) translateZ(calc(var(--s) / 2)); }
+.logo3d .f-left { transform: rotateY(-90deg) translateZ(calc(var(--s) / 2)); }
+.logo3d .f-top { transform: rotateX(90deg) translateZ(calc(var(--s) / 2)); }
+.logo3d .f-bottom { transform: rotateX(-90deg) translateZ(calc(var(--s) / 2)); }
+.logo3d .a .f-top, .logo3d .a .f-bottom { background: #fba548; }
+.logo3d .a .f-front, .logo3d .a .f-back { background: #f78b0b; }
+.logo3d .a .f-left, .logo3d .a .f-right { background: #c76f08; }
+.logo3d .b .f-top, .logo3d .b .f-bottom { background: #66b7d6; }
+.logo3d .b .f-front, .logo3d .b .f-back { background: #279dc6; }
+.logo3d .b .f-left, .logo3d .b .f-right { background: #1f86ab; }
+@media (max-width: 700px) { .logo3d { --s: 38px; } }
